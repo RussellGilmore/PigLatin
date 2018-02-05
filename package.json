@@ -1,0 +1,11 @@
+{
+  "name": "piglatin",
+  "version": "1.0.0",
+  "description": "A angular.js pig latin app. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Russell Gilmore",
+  "license": "ISC"
+}
