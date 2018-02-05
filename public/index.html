@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="pigApp">
 
 <head>
   <meta charset="utf-8">
@@ -8,14 +8,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-
   <script src="/js/translator.js" defer></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-  <link href="/css/styles.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-
+  <div class="container" ng-controller="PigController as pig">
+    <div class="pig-header">
+      <h1>Pig Latin</h1>
+    </div>
+    <div id="pig-text">
+      <h4 id="pig-latin">Please Type In Textbox For Translation</h4>
+    </div>
+    <div class="form-group">
+      <label>Normal Text:</label>
+      <textarea class="form-control" id="text-input"></textarea>
+    </div>
+  </div>
 </body>
 
 </html>
