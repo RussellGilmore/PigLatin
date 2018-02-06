@@ -29,15 +29,21 @@ function PigLatinService() {
       var newWord = '';
       var pigWords = [];
       // Vowel Check
+      var check = false;
       for (var i = 0; i <= normalWords.length - 1; i++) {
         for (var j = 0; j <= vowels.length - 1; j++) {
           var firstNorm = normalWords[i];
           if (firstNorm.charAt(0) == vowels[j]) {
             pigWords.push(firstNorm + 'ay');
+            check = true;
           }
         }
-        var ending = firstNorm.charAt(0) + 'ay';
-        pigWords.push(firstNorm.substring(1) + ending);
+        if (check === false) {
+          var ending = firstNorm.charAt(0) + 'ay';
+          pigWords.push(firstNorm.substring(1) + ending);
+        }
+        check = false;
+
       }
       // First Consonant
 
